@@ -1,0 +1,93 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'RubikBubbles';
+    src: url('./fonts/RubikBubbles-Regular.ttf') format('truetype'); /* Make sure the path is correct */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333347;
+    border-bottom: 2px solid black;
+    position: sticky; 
+    top: 0; 
+    z-index: 1000;
+}
+
+header img {
+    height: 40px;
+    width: 40px;
+    border-radius: 1.25rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0 1.5rem;
+    color: #dddee2;
+    display: inline-block;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 6rem;
+    background: linear-gradient(to right, rgb(142, 139, 126) 70%, rgb(63, 114, 136));
+    min-height: 100vh;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 50%;
+    padding-top: 6rem;
+}
+
+.intro h1, .intro h2 {
+    font-family: 'RubikBubbles', sans-serif;
+}
+
+.intro h1 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    color:  #377D75;
+}
+
+.intro h2 {
+    padding-top: 4rem;
+    padding-left: 3rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #577699;
+}
+
+.intro-img {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    align-self: center;
+}
+
+.intro-img img {
+    max-width: 70%; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
