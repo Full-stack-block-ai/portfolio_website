@@ -14,4 +14,3 @@ This repository contains the code for my personal portfolio website. It is a sin
 - **HTML5**
 - **CSS3**
 - **JavaScript**
-- **Chart.js** (for the candlestick chart)
