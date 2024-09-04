@@ -5,23 +5,29 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-padding-top: 70px;
+}
+
 @font-face {
     font-family: 'RubikBubbles';
-    src: url('./fonts/RubikBubbles-Regular.ttf') format('truetype'); /* Make sure the path is correct */
-    font-weight: normal;
+    src: url('./fonts/RubikBubbles-Regular.ttf') format('truetype');
     font-style: normal;
 }
 
 /* Header container */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333347;
+    border-bottom: 1px solid black;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333347;
-    border-bottom: 2px solid black;
-    position: sticky; 
-    top: 0; 
-    z-index: 1000;
 }
 
 header img {
