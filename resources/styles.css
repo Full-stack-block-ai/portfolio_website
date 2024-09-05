@@ -6,7 +6,7 @@
 }
 
 html {
-    scroll-padding-top: 70px;
+    scroll-padding-top: 3rem;
 }
 
 @font-face {
@@ -96,3 +96,70 @@ nav a {
     border-radius: 50%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Button Styles */
+.projects-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 4rem;
+    width: 50%;
+    align-self: center;
+    font-family: 'RubikBubbles', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #377D75;
+    border: none;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.projects-button:hover {
+    background-color: #285e5c; 
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Focus Effect (for accessibility) */
+.projects-button:focus {
+    outline: 2px solid #285e5c; 
+    outline-offset: 4px;
+}
+
+/* About Me Section */
+.about-me-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 6rem;
+    background: linear-gradient(to bottom, #A1ACA2, #A8B3A9);
+}
+
+.about-me-section img {
+    max-width: 50%; 
+    border-radius: 2rem; 
+}
+
+.about-me-section div {
+    max-width: 50%;
+    padding-left: 2.5rem;
+}
+
+.about-me-section h2 {
+    font-family: 'RubikBubbles', sans-serif;
+    font-size: 3rem;
+    color: #377D75;
+    margin-bottom: 1.5rem;
+}
+
+.about-me-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333; 
+}
+
+/* projects section */
