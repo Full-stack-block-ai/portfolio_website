@@ -46,33 +46,40 @@
         </div>
     </section>
 
-    <!-- projects section -->
+    <!-- Projects Section -->
     <section class="projects-section" id="projects">
         <h2>My Projects</h2>
         <div class="p-cards-container">
-            <div class="p-card">
-                <img src="resources/images/lucy's_hair_website.png" alt="lucys website screenshot">
-                <h3>Lucy's Hair</h3>
-                <p>This is a simple yet elegant website I created for my wife’s mobile hairdressing business. Built entirely with HTML and CSS, the site showcases her services, contact details, and a gallery of her work.</p>
-                <p>It’s a straightforward site designed with a clean and professional look using html and css to help her connect with clients online.</p>
-                <a href=""></a>
+            <div class="p-card" data-expanded="false">
+                <button class="btn-project-toggle">View More</button>
+                <img src="resources/images/lucy's_hair_website.png" alt="Lucy's Hair Website Screenshot">
+                <div class="p-card-content">
+                    <h3>Lucy's Hair</h3>
+                    <p class="card-short">This is a simple yet elegant website I created for my wife’s mobile hairdressing business.</p>
+                    <p class="card-full">Built entirely with HTML and CSS, the site showcases her services, contact details, and a gallery of her work. It’s a straightforward site designed with a clean and professional look using HTML and CSS to help her connect with clients online.</p>
+                </div>
+                
             </div>
-            <div class="p-card">
-                <img src="resources/images/metal_detectors_website.png" alt="the detectorists website screenshot">
+            <div class="p-card" data-expanded="false">
+                <button class="btn-project-toggle">View More</button>
+                <img src="resources/images/metal_detectors_website.png" alt="The Detectorist Website Screenshot">
                 <h3>The Detectorist!</h3>
-                <p>A mock website built for a fictional metal detectorist club.</p>
-                <p>The site features information about the club, showcases some of the finds, a great place for enthusiasts to share their discoveries. this uses html and css using media queries for responsive design.</p>
-                <a href=""></a>
+                <p class="card-short">A mock website built for a fictional metal detectorist club.</p>
+                <p class="card-full">The site features information about the club, showcases some of the finds, and is a great place for enthusiasts to share their discoveries. This uses HTML and CSS with media queries for responsive design.</p>
+                
             </div>
-            <div class="p-card">
-                <img src="resources/images/RanProjIdea_website.png" alt="random project generator screenshot">
-                <h3>Random project generator!</h3>
-                <p>This web app generates random coding project ideas to inspire developers when they’re stuck. Built using HTML, CSS, and JavaScript, it features a simple interface and a button to generate new project ideas.</p>
-                <p>The project was a fun way to practice JavaScript and DOM manipulation, providing quick inspiration for coding challenges.</p>
-                <a href=""></a>
+            <div class="p-card" data-expanded="false">
+                <button class="btn-project-toggle">View More</button>
+                <img src="resources/images/RanProjIdea_website.png" alt="Random Project Generator Screenshot">
+                <h3>Random Project Generator</h3>
+                <p class="card-short">This web app generates random coding project ideas to inspire developers when they’re stuck.</p>
+                <p class="card-full">Built using HTML, CSS, and JavaScript, it features a simple interface and a button to generate new project ideas. The project was a fun way to practice JavaScript and DOM manipulation, providing quick inspiration for coding challenges.</p>
+                
             </div>
         </div>
     </section>
+    
+    <!-- contact section -->
     <section class="contact-section"    id="contact"></section>
 </body>
 </html>
