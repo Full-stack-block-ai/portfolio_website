@@ -166,7 +166,8 @@ nav a {
 /* Projects Section */
 .projects-section {
     padding: 4rem 6rem;
-    background-color: #f8f8f8;
+    min-height: 100vh;
+    background: linear-gradient(to bottom,#A8B3A9,rgb(104, 154, 175) 70%);
     text-align: center;
 }
 
@@ -174,7 +175,7 @@ nav a {
     font-family: 'RubikBubbles', sans-serif;
     font-size: 3rem;
     color: #377D75;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
 }
 
 /* Projects Cards Container */
@@ -188,15 +189,15 @@ nav a {
 /* Project Card */
 .p-card {
     background-color: #fff;
-    border-radius: 0.625rem; /* 10px */
+    border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 2rem); /* Three cards per row */
+    flex: 1 1 calc(33.333% - 2rem);
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    max-height: 25rem;
+    max-height: 45vh;
     transition: max-height 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -212,7 +213,7 @@ nav a {
     color: #fff;
     border: none;
     padding: 0.6rem 1.2rem;
-    border-radius: 3.125rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     text-align: center;
     margin-bottom: 1rem;
@@ -236,28 +237,100 @@ nav a {
     font-size: 1.8rem; 
     margin-bottom: 0.8rem;
     color: #333;
-    text-align: left;
+    text-align: center;
 }
 
-/* Short description */
+/* Short Description */
 .card-short {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #444;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.75rem;
     text-align: left;
-    display: block;
+    line-height: 1.6;
+    border-radius: 0.5rem;
+    background-color: #f9f9f9;
 }
 
-/* Full description hidden initially */
+/* Full Description (hidden initially) */
 .card-full {
-    display: none;
+    font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    color: #666;
+    font-weight: 300;
+    color: #555;
+    padding: 0.75rem 1rem;
     margin-bottom: 1rem;
     text-align: left;
+    line-height: 1.6;
+    border-radius: 0.5rem;
+    background-color: #f1f1f1;
 }
+
 
 /* Show the full description when expanded */
 .p-card[data-expanded="true"] .card-full {
     display: block;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 6rem;
+    background-color: rgb(104, 154, 175);
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-family: 'RubikBubbles', sans-serif;
+    font-size: 3rem;
+    color: #377D75;
+    margin-bottom: 2rem;
+}
+
+.contact-section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-link {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #feffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #285e5c;
+}
+
+.contact-link img {
+    width: 2rem; /* Adjust icon size */
+    height: 2rem;
+}
+
+/* Footer Section */
+.footer-section {
+    background-color: #333347;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 1rem;
 }
