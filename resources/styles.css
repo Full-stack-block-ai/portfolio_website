@@ -1,4 +1,4 @@
-/* reset */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +7,11 @@
 
 html {
     scroll-padding-top: 3rem;
+}
+
+/* Prevent horizontal overflow */
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 @font-face {
@@ -40,6 +45,8 @@ nav ul {
     display: flex;
     list-style: none;
     padding: 1rem;
+    width: 100%; /* Ensure the navigation doesn't exceed screen width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 nav a {
@@ -57,6 +64,9 @@ nav a {
     padding: 2rem 6rem;
     background: linear-gradient(to right, rgb(142, 139, 126) 70%, rgb(63, 114, 136));
     min-height: 100vh;
+    width: 100%; /* Ensure sections do not overflow the screen */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto;
 }
 
 .intro {
@@ -92,7 +102,8 @@ nav a {
 }
 
 .intro-img img {
-    max-width: 70%; 
+    max-width: 100%; /* Ensure images do not exceed their container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
@@ -102,7 +113,8 @@ nav a {
     display: inline-block;
     padding: 1rem 2rem;
     margin-top: 4rem;
-    width: 50%;
+    width: 100%; /* Ensure button width fits mobile */
+    max-width: 90%; /* Prevent button from getting too large */
     align-self: center;
     font-family: 'RubikBubbles', sans-serif;
     font-size: 1.5rem;
@@ -136,10 +148,14 @@ nav a {
     align-items: center;
     padding: 4rem 6rem;
     background: linear-gradient(to bottom, #A1ACA2, #A8B3A9);
+    width: 100%; /* Ensure sections do not overflow the screen */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto;
 }
 
 .about-me-section img {
-    max-width: 50%;
+    max-width: 100%; /* Ensure images do not exceed their container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 2rem;
 }
 
@@ -169,6 +185,9 @@ nav a {
     min-height: 100vh;
     background: linear-gradient(to bottom,#A8B3A9,rgb(104, 154, 175) 70%);
     text-align: center;
+    width: 100%; /* Ensure sections do not overflow the screen */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto;
 }
 
 .projects-section h2 {
@@ -181,9 +200,11 @@ nav a {
 /* Projects Cards Container */
 .p-cards-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Ensure cards wrap if needed */
     justify-content: space-between;
     gap: 2rem;
+    width: 100%; /* Prevent project cards from overflowing */
+    box-sizing: border-box; /* Include padding in width */
 }
 
 /* Project Card */
@@ -201,7 +222,6 @@ nav a {
     transition: max-height 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* When the card is expanded */
 .p-card[data-expanded="true"] {
     max-height: none;
     height: auto;
@@ -268,8 +288,6 @@ nav a {
     background-color: #f1f1f1;
 }
 
-
-/* Show the full description when expanded */
 .p-card[data-expanded="true"] .card-full {
     display: block;
 }
@@ -279,6 +297,9 @@ nav a {
     padding: 4rem 6rem;
     background-color: rgb(104, 154, 175);
     text-align: center;
+    width: 100%; /* Ensure sections do not overflow the screen */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin: 0 auto;
 }
 
 .contact-section h2 {
@@ -299,6 +320,8 @@ nav a {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    width: 100%; /* Ensure the contact links container fits within the viewport */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .contact-link {
@@ -310,6 +333,9 @@ nav a {
     align-items: center;
     gap: 0.5rem;
     transition: color 0.3s ease;
+    word-wrap: break-word; /* Ensure long links wrap */
+    white-space: normal; /* Prevent long text from overflowing */
+    text-align: center;
 }
 
 .contact-link:hover {
@@ -456,9 +482,8 @@ nav a {
         max-height: none;
     }
 
-     /* Contact Links Section */
+    /* Contact Links Section */
     .contact-links {
-        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
