@@ -63,8 +63,11 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.3);
     max-width: 50%;
     padding-top: 6rem;
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 .intro h1, .intro h2 {
