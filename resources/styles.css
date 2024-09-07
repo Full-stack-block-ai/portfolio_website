@@ -422,6 +422,9 @@ nav a {
 
 /* Mobile (smartphones and small devices) */
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 12rem;
+    }
     .nav-links {
         display:flex;
         flex-direction: column;
