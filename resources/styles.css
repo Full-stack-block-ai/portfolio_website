@@ -20,14 +20,28 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content:space-between ;
     background-color: #333347;
     border-bottom: 0.0625rem solid black;
 }
 
+.logo {
+    display: flex;
+    padding: 10px ;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header img {
@@ -36,8 +50,9 @@ header img {
     border-radius: 1.25rem;
 }
 
-nav ul {
+.nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
     padding: 1rem;
 }
@@ -47,6 +62,13 @@ nav a {
     padding: 0 1.5rem;
     color: #dddee2;
     display: inline-block;
+}
+
+/* hamburger menu */
+.hamburger-menu {
+    display: none;
+    color: rgb(32, 30, 30);
+    padding: 10px;
 }
 
 /* Hero Section */
@@ -337,6 +359,11 @@ nav a {
 
 /* Tablet (portrait and landscape) */
 @media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .hero-section {
         flex-direction: column;
         padding: 2rem 3rem;
@@ -395,10 +422,11 @@ nav a {
 
 /* Mobile (smartphones and small devices) */
 @media (max-width: 768px) {
-    nav ul {
+    .nav-links {
+        display:flex;
         flex-direction: column;
-        padding: 0.5rem;
     }
+
 
     nav a {
         padding: 0.5rem;
