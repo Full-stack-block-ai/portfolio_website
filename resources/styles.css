@@ -6,8 +6,10 @@
 }
 
 html {
-    scroll-padding-top: 3rem;
+    scroll-padding-top: 4rem;
 }
+
+
 
 @font-face {
     font-family: 'RubikBubbles';
@@ -21,8 +23,10 @@ header {
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333347;
+    padding: 1rem;
     border-bottom: 0.0625rem solid black;
 }
 
@@ -67,9 +71,15 @@ nav a {
 /* hamburger menu */
 .hamburger-menu {
     display: none;
-    color: rgb(32, 30, 30);
-    padding: 10px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
 }
+
 
 /* Hero Section */
 .hero-section {
@@ -109,14 +119,17 @@ nav a {
 .intro-img {
     display: flex;
     justify-content: center;
-    max-width: 50%;
     align-self: center;
+    padding: 1rem;
+    max-width: 100%;
 }
 
 .intro-img img {
-    max-width: 70%; 
+    width: 100%;
+    height: auto;
+    max-width: 500px;
     border-radius: 50%;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 /* Button Styles */
@@ -161,8 +174,9 @@ nav a {
 }
 
 .about-me-section img {
-    max-width: 50%;
-    border-radius: 2rem;
+    max-width: 45%;
+    border-radius: 4rem;
+    padding: 2rem;
 }
 
 .about-me-section div {
@@ -185,115 +199,49 @@ nav a {
     color: #333;
 }
 
-/* Projects Section */
-.projects-section {
-    padding: 4rem 6rem;
-    min-height: 100vh;
-    background: linear-gradient(to bottom,#A8B3A9,rgb(104, 154, 175) 70%);
+/* Bento Box */
+.portfolio-text {
+    font-weight: 900;
+    padding: 30px;
+    font-size: 64px;
+    margin-bottom: 10px;
     text-align: center;
 }
-
-.projects-section h2 {
-    font-family: 'RubikBubbles', sans-serif;
-    font-size: 3rem;
-    color: #377D75;
-    margin-bottom: 6rem;
+.bento-container {
+    background: linear-gradient(to bottom, #A8B3A9, #A1ACA2);
 }
 
-/* Projects Cards Container */
-.p-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
+/* Bento Grid Layout */
+.bento-grid {
+    padding: 0 1.5rem;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(1, 1fr);    /* 1 equal row */
+    height: auto; /* Height will adjust based on content */
 }
 
-/* Project Card */
-.p-card {
-    background-color: #fff;
-    border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 2rem);
+/* Bento Item Styling */
+.bento-container .bento-item {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     overflow: hidden;
-    max-height: 45vh;
-    transition: max-height 0.5s ease, box-shadow 0.5s ease;
-}
-
-/* When the card is expanded */
-.p-card[data-expanded="true"] {
-    max-height: none;
-    height: auto;
-}
-
-/* Button Styles */
-.btn-project-toggle {
-    background-color: #377D75;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 1rem;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.btn-project-toggle:hover {
-    background-color: #285e5c;
+    padding: 0;  /* Remove extra padding around the images */
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 /* Image Styling */
-.p-card img {
-    width: 100%;
-    border-radius: 0.625rem;
-    margin-bottom: 1rem;
+.bento-container .bento-item img {
+    position: relative;
+    width: 100%; /* Ensure images take up full width of their container */
+    height: 100%;
+    object-fit: cover; /* Ensures images maintain aspect ratio while covering */
+    transition: transform 3s ease;
 }
 
-/* Card Title */
-.p-card h3 {
-    font-size: 1.8rem; 
-    margin-bottom: 0.8rem;
-    color: #333;
-    text-align: center;
-}
-
-/* Short Description */
-.card-short {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: #444;
-    padding: 0.75rem 1rem;
-    margin-bottom: 0.75rem;
-    text-align: left;
-    line-height: 1.6;
-    border-radius: 0.5rem;
-    background-color: #f9f9f9;
-}
-
-/* Full Description (hidden initially) */
-.card-full {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    color: #555;
-    padding: 0.75rem 1rem;
-    margin-bottom: 1rem;
-    text-align: left;
-    line-height: 1.6;
-    border-radius: 0.5rem;
-    background-color: #f1f1f1;
-}
-
-
-/* Show the full description when expanded */
-.p-card[data-expanded="true"] .card-full {
-    display: block;
+/* Hover Effect */
+.bento-container .bento-item:hover img {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
 }
 
 /* Contact Section */
@@ -387,6 +335,9 @@ nav a {
         max-width: 100%;
     }
 
+    .intro-img img {
+        max-width: 300px;
+    }
     .projects-button {
         width: 70%;
     }
@@ -406,18 +357,7 @@ nav a {
         padding-left: 0;
     }
 
-    .projects-section {
-        padding: 3rem 3rem;
-    }
-
-    .p-cards-container {
-        flex-direction: column;
-    }
-
-    .p-card {
-        flex: 1 1 100%;
-        max-height: none;
-    }
+    
 }
 
 /* Mobile (smartphones and small devices) */
@@ -450,8 +390,12 @@ nav a {
         padding-top: 1.5rem;
     }
 
-    .intro-img img {
+    .intro-img  {
         max-width: 100%;
+    }
+
+    .intro-img img {
+        max-width: 300px;
     }
 
     .projects-button {
@@ -474,18 +418,29 @@ nav a {
         padding-left: 0;
     }
 
-    .projects-section {
-        padding: 2rem 2rem;
+    .hamburger-menu {
+        display: block;
     }
 
-    .p-cards-container {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background-color: #333347;
         flex-direction: column;
+        align-items: center;
+        list-style: none;
+        padding: 1rem;
+        gap: 1.5rem;
     }
 
-    .p-card {
-        flex: 1 1 100%;
-        max-height: none;
+    .nav-links.active {
+        display: flex;
     }
+
+    
 
      /* Contact Links Section */
     .contact-links {

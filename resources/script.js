@@ -17,5 +17,12 @@ document.querySelectorAll('.btn-project-toggle').forEach(button => {
     });
 });
 
+const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
 // Set the current year in the footer
 document.getElementById('current-year').textContent = new Date().getFullYear();
