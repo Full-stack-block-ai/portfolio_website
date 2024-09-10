@@ -195,6 +195,7 @@ nav a {
     padding: 2rem;
     color: #377D75;
     margin-bottom: 1.5rem;
+    
 }
 
 .about-me-section p {
@@ -215,6 +216,30 @@ nav a {
 .bento-container {
     background: linear-gradient(to bottom, #A8B3A9, #A1ACA2);
     text-align: center;
+}
+
+#project-generator {
+    margin: auto;
+    width: 88%;
+    background-color: #333;
+    border-radius: 1rem;
+    color: #dddee2;
+}
+
+#windows-h2{
+    width: 94%;
+    background-color: #333;
+    border-radius: 1rem;
+    margin: auto;
+    color: #dddee2;
+}
+
+#lucys-h2 {
+    margin: auto;
+    width: 94%;
+    background-color: #333;
+    border-radius: 1rem;
+    color: #dddee2;
 }
 
 /* Center the anchor tag */
@@ -294,7 +319,7 @@ nav a {
     max-width: 600px;
     background-color: rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     height: 500px;
 }
 
@@ -482,7 +507,7 @@ nav a {
 /* Mobile (smartphones and small devices) */
 @media (max-width: 768px) {
     html {
-        scroll-padding-top: 12rem;
+        scroll-padding-top: 2rem;
     }
     .nav-links {
         display:flex;
@@ -559,6 +584,10 @@ nav a {
         display: flex;
     }
 
+
+    .portfolio-text {
+        font-size: 1.5rem;
+    }
     
 
      /* Contact Links Section */
