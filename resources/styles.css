@@ -507,7 +507,7 @@ nav a {
 /* Mobile (smartphones and small devices) */
 @media (max-width: 768px) {
     html {
-        scroll-padding-top: 2rem;
+        scroll-padding-top: 0.5rem;
     }
     .nav-links {
         display:flex;
