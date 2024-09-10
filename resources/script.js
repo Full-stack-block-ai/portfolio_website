@@ -1,29 +1,19 @@
 // Toggle project card expansion
-document.querySelectorAll('.btn-project-toggle').forEach(button => {
-    button.addEventListener('click', function() {
-         // Get the parent card and check if the card is expanded
-        const card = this.parentElement;
-        const isExpanded = card.getAttribute('data-expanded') === 'true'; 
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links li a'); // Get all nav links
 
-        if (isExpanded) {
-            // Collapse the card
-            card.setAttribute('data-expanded', 'false');
-            this.innerText = 'View More';
-        } else {
-            // Expand the card
-            card.setAttribute('data-expanded', 'true');
-            this.innerText = 'View Less'; 
-        }
-    });
+// Toggle menu visibility when hamburger button is clicked
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
 
-const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+// Close the menu when any nav link is clicked
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');  // Remove the 'active' class to hide the menu
     });
-
+})
 
 // An object containing three arrays that make up our random message.
 const messageComponents = {
@@ -104,6 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
         messageDisplay.textContent = newProject;
     });
 });
+
+
 
 // Set the current year in the footer
 document.getElementById('current-year').textContent = new Date().getFullYear();
