@@ -221,7 +221,7 @@ nav a {
 #project-generator {
     width: 90%;
     background-color: #333;
-    margin: 1.5rem;
+    margin: 1.5rem auto;
     border-radius: 1rem;
     color: #dddee2;
 }
@@ -230,14 +230,14 @@ nav a {
     width: 90%;;
     background-color: #333;
     border-radius: 1rem;
-    margin: 1.5rem;
+    margin: 1.5rem auto;
     color: #dddee2;
 }
 
 #lucys-h2 {
     width: 90%;
-    margin: 1.5rem;
-    background-color: #333;
+    margin: 1.5rem auto;
+    background-color: #333333;
     border-radius: 1rem;
     color: #dddee2;
 }
