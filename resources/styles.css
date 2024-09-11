@@ -219,7 +219,7 @@ nav a {
 }
 
 #project-generator {
-    width: 100%;
+    width: 90%;
     background-color: #333;
     margin: 1.5rem;
     border-radius: 1rem;
@@ -227,7 +227,7 @@ nav a {
 }
 
 #windows-h2{
-    width: 100%;;
+    width: 90%;;
     background-color: #333;
     border-radius: 1rem;
     margin: 1.5rem;
@@ -235,7 +235,7 @@ nav a {
 }
 
 #lucys-h2 {
-    width: 100%;
+    width: 90%;
     margin: 1.5rem;
     background-color: #333;
     border-radius: 1rem;
